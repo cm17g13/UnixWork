@@ -2,15 +2,15 @@
 
 echo "Loops though a list and prints fizz if divisible by 3, buzz if 5"
 
-read counter
+read number
 
 ARRAY=()
 
 #adds numbers to the array
 #for numbers in {1..30}, back when there was no user input
-for (( number=1; number <= $counter; number++ ))
+for (( counter=1; counter <= $number; counter++ ))
 do
-	ARRAY+=($number)
+	ARRAY+=($counter)
 done
 
 #Loops though array and checks each number as i
