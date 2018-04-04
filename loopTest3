@@ -8,7 +8,7 @@ ARRAY=()
 
 #adds numbers to the array
 #for numbers in {1..30}, back when there was no user input
-for (( counter=1; counter <= $number; counter++ ))
+for (( counter=1; counter <= $number; counter++ )) 
 do
 	ARRAY+=($counter)
 done
