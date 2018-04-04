@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "How many loops do you want to do?"
+
+a=0
+
+read value
+
+#checks if a is less than the given value
+while [ $a -lt $value ]
+do
+((a++)) #or do a=$((a+1))
+echo "loop $a"
+done
+
+echo "done all $value loops"

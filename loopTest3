@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "Loops though a list and prints fizz if divisible by 3, buzz if 5"
+
+read counter
+
+ARRAY=()
+
+#adds numbers to the array
+#for numbers in {1..30}, back when there was no user input
+for (( number=1; number <= $counter; number++ ))
+do
+	ARRAY+=($number)
+done
+
+#Loops though array and checks each number as i
+
+for i in ${ARRAY[@]}
+do
+	value=false
+	if [ $((i%3)) -eq 0 ]
+	then
+		echo -n "Fizz"
+		value=true
+	fi
+
+	if [ $((i%5)) -eq 0 ]
+	then
+		echo -n "Buzz"
+		value=true
+	fi
+
+	if [ $value = false ]
+	then
+		echo "$i"
+	else
+		echo "!"
+	fi
+done
+echo "done all loops"
