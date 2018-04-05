@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+create_user () {
+	echo "What would you like to call the user?"
+	read userName
+	echo "What would you like to be as the users password"
+	read -s userPw1
+	echo "Please confirm the same password"
+	read -s userPw2
+
+	if [ "$userPw1" == "$userPw2" ]
+		then
+		sudo useradd -u 1234 -g users -d /home/username -s /bin/bash -p $(echo "$userPw1" | openssl passwd -1 -stdin) "$userName"
+		#echo "$password" | userPw2 "$userName" --stdin
+		switch_user $userName
+	else
+		echo "Sorry, the passwords were not the same"
+	fi
+}
+
+switch_user () {
+	cut -d: -f1 /etc/passwd
+	su - "$1"
+	cd /home/"$1"
+	#restart terminal, sudo userdel "usersname"
+
+}
+
+create_user
+
