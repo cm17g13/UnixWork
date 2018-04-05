@@ -1,5 +1,4 @@
- 13:08:33 up 8 min,  1 user,  load average: 0.48, 0.60, 0.40
-Thursday 14 2018 13:11:40
- 13:11:40 up 11 min,  1 user,  load average: 0.18, 0.45, 0.37
+Thursday 14 2018 14:33:11
+ 14:33:11 up  1:33,  1 user,  load average: 0.27, 0.32, 0.34
 USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
-callum   tty7     :0               13:01   11:47  32.25s  0.15s /sbin/upstart --user
+callum   tty7     :0               13:01    1:33m  5:44   0.15s /sbin/upstart --user

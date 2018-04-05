@@ -3,7 +3,7 @@ get_data () {
 	date '+%A %W %Y %X' | tee logFile1.txt
 	w | tee logFile2.txt
 	#uptime | tee logFile3.txt this is the same as the first line of the "w" command
-	cat logFile1.txt logFile2.txt >> logFile.txt
+	cat logFile1.txt logFile2.txt > logFile.txt
 	rm logFile1.txt logFile2.txt
 }
 
